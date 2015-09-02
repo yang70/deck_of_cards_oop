@@ -34,6 +34,7 @@ class Deck
   end
 end
 
+# Card constructor
 class Card
   attr_accessor :card
 
