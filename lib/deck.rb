@@ -11,7 +11,7 @@ class Deck
 
     suits.each do |suit|
       value = (1..13).to_a
-      value.each { |num| deck << Card.new(suit, num).card }
+      value.each { |num| deck << Card.new(suit, num) }
     end
   end
 
