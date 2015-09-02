@@ -1,4 +1,3 @@
-# Card constructor
 class Card
   attr_accessor :card
 

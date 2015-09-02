@@ -1,6 +1,5 @@
-require 'card'
+require_relative 'card'
 
-# Deck of cards constructor
 class Deck
   attr_accessor :deck
 
@@ -13,6 +12,7 @@ class Deck
       value = (1..13).to_a
       value.each { |num| deck << Card.new(suit, num) }
     end
+
   end
 
   def spades
@@ -34,6 +34,6 @@ class Deck
   private
 
   def select_suit(suit)
-    deck.select { |card| card[/#{suit}/] }
+    deck.select { |card| card.card[/#{suit}/] }
   end
 end
