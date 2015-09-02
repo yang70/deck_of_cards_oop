@@ -1,22 +1,20 @@
+# Deck of cards constructor
 class Deck
-
   attr_accessor :deck
 
   def initialize
     @deck = []
 
-    suits = %w[s h d c]
+    suits = %w(s h d c)
 
     suits.each do |suit|
       value = (1..13).to_a
-      value.each do |num|
-        deck << "#{suit}#{num.to_s}"
-      end
+      value.each { |num| deck << "#{suit}#{num}" }
     end
   end
 
   def select_suit(suit)
-    deck.select{ |card| card[/#{suit}/] }
+    deck.select { |card| card[/#{suit}/] }
   end
 
   def spades

@@ -3,7 +3,6 @@ require "minitest/autorun"
 require "deck"
 
 describe "test that creating a new deck has features of a card deck" do
-
   before do
     @test_deck = Deck.new
   end
@@ -18,5 +17,4 @@ describe "test that creating a new deck has features of a card deck" do
     @test_deck.diamonds.length.must_equal 13
     @test_deck.clubs.length.must_equal 13
   end
-
 end
