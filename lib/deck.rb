@@ -9,7 +9,7 @@ class Deck
 
     suits.each do |suit|
       value = (1..13).to_a
-      value.each { |num| deck << "#{suit}#{num}" }
+      value.each { |num| deck << Card.new(suit, num).card }
     end
   end
 
@@ -31,5 +31,13 @@ class Deck
 
   def clubs
     select_suit('c')
+  end
+end
+
+class Card
+  attr_accessor :card
+
+  def initialize(suit, value)
+    @card = "#{suit}#{value}"
   end
 end
