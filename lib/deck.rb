@@ -1,3 +1,5 @@
+require 'card'
+
 # Deck of cards constructor
 class Deck
   attr_accessor :deck
@@ -33,14 +35,5 @@ class Deck
 
   def select_suit(suit)
     deck.select { |card| card[/#{suit}/] }
-  end
-end
-
-# Card constructor
-class Card
-  attr_accessor :card
-
-  def initialize(suit, value)
-    @card = "#{suit}#{value}"
   end
 end
