@@ -13,10 +13,6 @@ class Deck
     end
   end
 
-  def select_suit(suit)
-    deck.select { |card| card[/#{suit}/] }
-  end
-
   def spades
     select_suit('s')
   end
@@ -31,6 +27,12 @@ class Deck
 
   def clubs
     select_suit('c')
+  end
+
+  private
+
+  def select_suit(suit)
+    deck.select { |card| card[/#{suit}/] }
   end
 end
 
